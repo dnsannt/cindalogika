@@ -1,0 +1,24 @@
+CRITICAL - 2022-06-01 19:07:48 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(28): require('/Applications/X...')
+#4 {main}
+CRITICAL - 2022-06-01 19:07:53 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(28): require('/Applications/X...')
+#4 {main}
+CRITICAL - 2022-06-01 19:12:53 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(28): require('/Applications/X...')
+#4 {main}
+CRITICAL - 2022-06-01 19:12:58 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(28): require('/Applications/X...')
+#4 {main}

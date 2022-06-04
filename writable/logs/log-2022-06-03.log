@@ -1,0 +1,263 @@
+CRITICAL - 2022-06-03 01:48:32 --> ini_set(): Session ini settings cannot be changed after headers have already been sent
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Sess...', '/Applications/X...', 71)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Session/Handlers/FileHandler.php(71): ini_set('session.save_pa...', '/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Config/Services.php(570): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Config/BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Config/BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Config/Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Config/BaseService.php(248): CodeIgniter\Config\Services::session()
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/BaseController.php(51): session()
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(810): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#10 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#11 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#14 {main}
+CRITICAL - 2022-06-03 01:48:32 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Config/Events.php:32) in /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Debug/Exceptions.php:112
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', '/Applications/X...', 112)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Debug/Exceptions.php(112): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-06-03 02:28:52 --> mb_strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'mb_strpos(): Pa...', '/Applications/X...', 138)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Validation/FileRules.php(138): mb_strpos(NULL, 'image')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Validation/Validation.php(292): CodeIgniter\Validation\FileRules->is_image(NULL, Array, Array, NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Validation/Validation.php(157): CodeIgniter\Validation\Validation->processRules('sampul', 'sampul', NULL, Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Controller.php(160): CodeIgniter\Validation\Validation->run()
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Komik.php(59): CodeIgniter\Controller->validate(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Komik->save()
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#11 {main}
+CRITICAL - 2022-06-03 03:27:20 --> unlink(img/1654241590_996cc128b97659befe51.jpeg): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(img/1654...', '/Applications/X...', 111)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Komik.php(111): unlink('img/1654241590_...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Komik->delete('49')
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#7 {main}
+CRITICAL - 2022-06-03 03:27:33 --> Trying to access array offset on value of type null
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Komik.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', '/Applications/X...', 111)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Komik->delete('49')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#6 {main}
+CRITICAL - 2022-06-03 04:10:48 --> unlink(img/): Operation not permitted
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(img/): O...', '/Applications/X...', 113)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Komik.php(113): unlink('img/')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Komik->delete('56')
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#7 {main}
+ERROR - 2022-06-03 06:00:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0, 1, 2) VALUES (:0:, :1:, :2:)' at line 1
+CRITICAL - 2022-06-03 09:50:28 --> syntax error, unexpected token "echo", expecting "]"
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Router/Router.php(175): CodeIgniter\Router\Router->autoRoute('pages')
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(726): CodeIgniter\Router\Router->handle('pages')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#6 {main}
+CRITICAL - 2022-06-03 09:52:08 --> syntax error, unexpected token "echo", expecting "]"
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Router/Router.php(175): CodeIgniter\Router\Router->autoRoute('pages')
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(726): CodeIgniter\Router\Router->handle('pages')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#6 {main}
+ERROR - 2022-06-03 11:30:39 --> Error connecting to the database: Connection refused
+CRITICAL - 2022-06-03 11:30:39 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Models/KomikModel.php(16): CodeIgniter\BaseModel->findAll()
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Komik.php(20): App\Models\KomikModel->getKomik()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Komik->index()
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#11 {main}
+ERROR - 2022-06-03 11:30:43 --> Error connecting to the database: Connection refused
+CRITICAL - 2022-06-03 11:30:43 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Models/KomikModel.php(16): CodeIgniter\BaseModel->findAll()
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Komik.php(20): App\Models\KomikModel->getKomik()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Komik->index()
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Komik))
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#11 {main}
+CRITICAL - 2022-06-03 12:00:17 --> Undefined variable $komik
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Views/orang/index.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/Applications/X...', 21)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(210): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Common.php(1089): CodeIgniter\View\View->render('orang/index', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Orang.php(23): view('orang/index', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Orang->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orang))
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#10 {main}
+CRITICAL - 2022-06-03 12:00:29 --> Undefined variable $k
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Views/orang/index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', '/Applications/X...', 24)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(210): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Common.php(1089): CodeIgniter\View\View->render('orang/index', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Orang.php(23): view('orang/index', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Orang->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orang))
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#10 {main}
+CRITICAL - 2022-06-03 12:12:57 --> Undefined property: CodeIgniter\Pager\Pager::$links
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Views/orang/index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/Applications/X...', 33)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(210): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Common.php(1089): CodeIgniter\View\View->render('orang/index', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Orang.php(25): view('orang/index', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Orang->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orang))
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#10 {main}
+CRITICAL - 2022-06-03 12:14:37 --> Undefined property: CodeIgniter\Pager\Pager::$links
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Views/orang/index.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/Applications/X...', 30)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(210): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Common.php(1089): CodeIgniter\View\View->render('orang/index', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Orang.php(25): view('orang/index', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Orang->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orang))
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#10 {main}
+CRITICAL - 2022-06-03 12:15:37 --> Call to undefined method App\Models\orangModel::pager
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Orang.php(22): CodeIgniter\Model->__call('pager', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Orang->index()
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orang))
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#6 {main}
+CRITICAL - 2022-06-03 12:15:44 --> Undefined property: CodeIgniter\Pager\Pager::$links
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Views/orang/index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/Applications/X...', 33)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(210): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Common.php(1089): CodeIgniter\View\View->render('orang/index', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Orang.php(25): view('orang/index', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Orang->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orang))
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#10 {main}
+CRITICAL - 2022-06-03 12:16:17 --> Undefined property: CodeIgniter\Pager\Pager::$links
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Views/orang/index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/Applications/X...', 33)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(210): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Common.php(1089): CodeIgniter\View\View->render('orang/index', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Orang.php(25): view('orang/index', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Orang->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orang))
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#10 {main}
+CRITICAL - 2022-06-03 12:17:14 --> Undefined property: CodeIgniter\Pager\Pager::$links
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Views/orang/index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/Applications/X...', 33)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(210): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Common.php(1089): CodeIgniter\View\View->render('orang/index', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Orang.php(25): view('orang/index', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Orang->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orang))
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#10 {main}
+CRITICAL - 2022-06-03 12:18:43 --> Undefined property: CodeIgniter\Pager\Pager::$links
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Views/orang/index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/Applications/X...', 33)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(210): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Common.php(1089): CodeIgniter\View\View->render('orang/index', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Orang.php(25): view('orang/index', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Orang->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orang))
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#10 {main}
+CRITICAL - 2022-06-03 12:19:14 --> Undefined property: CodeIgniter\Pager\Pager::$links
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Views/orang/index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/Applications/X...', 33)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(210): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Common.php(1089): CodeIgniter\View\View->render('orang/index', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Orang.php(25): view('orang/index', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Orang->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orang))
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#10 {main}
+CRITICAL - 2022-06-03 12:19:15 --> Undefined property: CodeIgniter\Pager\Pager::$links
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Views/orang/index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/Applications/X...', 33)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(210): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Common.php(1089): CodeIgniter\View\View->render('orang/index', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Orang.php(25): view('orang/index', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Orang->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orang))
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#10 {main}
+CRITICAL - 2022-06-03 12:19:15 --> Undefined property: CodeIgniter\Pager\Pager::$links
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Views/orang/index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/Applications/X...', 33)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(210): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Common.php(1089): CodeIgniter\View\View->render('orang/index', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Orang.php(25): view('orang/index', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Orang->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orang))
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#10 {main}
+CRITICAL - 2022-06-03 12:19:15 --> Undefined property: CodeIgniter\Pager\Pager::$links
+#0 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Views/orang/index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', '/Applications/X...', 33)
+#1 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(210): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Common.php(1089): CodeIgniter\View\View->render('orang/index', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/app/Controllers/Orang.php(25): view('orang/index', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(832): App\Controllers\Orang->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Orang))
+#7 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/codeigniter4/Sites/ci4/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#10 {main}
