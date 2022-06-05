@@ -7,7 +7,7 @@ use App\Models\ContentModel;
 
 class Content extends BaseController
 {
-    protected $komikModel;
+    protected $contentModel;
 
     public function __construct()
     {
